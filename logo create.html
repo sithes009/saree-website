@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Sarees</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cart {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #f3f3f3;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .product-card button {
+      background-color: #e91e63;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
+    }
+
+    .logo-banner {
+      background-image: url('https://i.imgur.com/Ms4RoZB.jpg'); /* Replace with your own image if needed */
+      background-size: cover;
+      background-position: center;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <!-- ✅ Header with Logo and Background -->
+    <div class="logo-banner">
+      <header>
+        <h1 style="font-family: 'Georgia', serif; color: crimson;">
+          Murugan<span style="color:gold;">⚔️Vel</span> & Dharshini<span style="color:gold;">⚔️Vel</span>
+        </h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#products">Sarees</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Cart Display -->
+    <div class="cart">
+      🛒 Cart Items: <span id="cart-count">0</span>
+    </div>
+
+    <section class="hero">
+      <h2>Traditional Elegance for Every Occasion</h2>
+      <p>"Our sarees are available exclusively for online delivery, ensuring a safe and secure shopping experience. Each piece features premium designs and superior quality you can trust. We also offer an easy exchange option for your convenience."</p>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Our Sarees</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="saree 3.jpeg" alt="Silk Saree">
+          <h3>Silk Saree</h3>
+          <p>₹300</p>
+          <button onclick="addToCart('Silk Saree')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="saree 2.jpeg" alt="Cotton Saree">
+          <h3>Cotton Saree</h3>
+          <p>₹1,299</p>
+          <button onclick="addToCart('Cotton Saree')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="saree pic.jpg" alt="Georgette Saree">
+          <h3>Georgette Saree</h3>
+          <p>₹1,599</p>
+          <button onclick="addToCart('Georgette Saree')">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>📞 +91 9962212550</p>
+      <p>📧 <a href="mailto:vanchikodibalamurugan@gmail.com">vanchikodibalamurugan@gmail.com</a></p>
+      <p>📍 Chennai, Tamil Nadu</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Elegant Sarees. All rights reserved.</p>
+    </footer>
+
+    <script>
+      let cartCount = 0;
+
+      function addToCart(item) {
+        cartCount++;
+        document.getElementById('cart-count').innerText = cartCount;
+        alert(item + ' added to cart!');
+      }
+    </script>
+  </center>
+</body>
+</html>
